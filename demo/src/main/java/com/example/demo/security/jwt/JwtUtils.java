@@ -14,9 +14,9 @@ import io.jsonwebtoken.*;
 @Component
 public class JwtUtils {
   private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
-  @Value("${jwtSecret}")
+  @Value("${jwt.jwtSecretKey}")
   private String jwtSecret;
-  @Value("${jwtExpirationMs}")
+  @Value("${jwt.jwtExpirationMs}")
   private int jwtExpirationMs;
   public String generateJwtToken(Authentication authentication) {
     UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();

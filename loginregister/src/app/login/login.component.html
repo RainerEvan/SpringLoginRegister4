@@ -1,8 +1,11 @@
 <div class="col-md-12">
-    <div class="card card-container">
-        <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png">
+    <div class="card-container pt-5">
+        <h1>Login</h1>
+        <div class="text-center">
+            <img id="profile-img" class="img-fluid rounded-circle mb-3" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png">
+        </div>
 
-        <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <form class="form-signin" *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" class="form-control" name="username" [(ngModel)]="form.username" #username="ngModel" required>
